@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150919090458) do
+ActiveRecord::Schema.define(version: 20150919111837) do
+
+  create_table "events", force: :cascade do |t|
+    t.text     "location"
+    t.text     "type"
+    t.datetime "start"
+    t.datetime "end"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text     "name"
+  end
+
+  create_table "events_users", id: false, force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "event_id"
+  end
+
+  add_index "events_users", ["event_id"], name: "index_events_users_on_event_id"
+  add_index "events_users", ["user_id"], name: "index_events_users_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -26,6 +44,9 @@ ActiveRecord::Schema.define(version: 20150919090458) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.text     "address"
+    t.text     "sports"
+    t.text     "name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

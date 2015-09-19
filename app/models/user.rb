@@ -6,4 +6,7 @@ class User < ActiveRecord::Base
 
   validates(:password_confirmation, presence: true)
 
+  #relations
+  has_and_belongs_to_many :events
+
 end
