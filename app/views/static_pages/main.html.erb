@@ -1,8 +1,15 @@
-<h1>StaticPages#main</h1>
-<p>Find me in app/views/static_pages/main.html.erb</p>
+<div class="container">
+	<header>
+		<h1>Klutch PickUp</h1>
+		<h3>Don't look for pick up games, my friend. Let the pick up games find you.</h3>
+		<p>Join Klutch PickUp to get real time notifications on pick up games happening near you.</p>
+	</header>
 
-<ul>
-  <li>add banner</li>
-  <li>add login button</li>
-  <li>add sign up button</li>
-</ul>
+	<section>
+		<div class="login-form">
+			<%= link_to "Sign in", new_user_session_path, class: "btn btn-primary btn-large"%>
+			<%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-large"%>
+			<p><br /> <a class="login-link" href="#">Lost your password?</a></p>
+		</div>
+	</section>
+</div>

@@ -1,3 +1,16 @@
-<h1>New Event</h1>
-<%= render 'form' %>
-<%= link_to 'Back', events_path %>
+<div class="row event-form">
+  <div class="col-md-6 col-md-offset-3">
+
+    <h1>New Event</h1>
+
+    <%= simple_form_for @event do |f| %>
+      <%= f.input :name, :as => :string, wrapper_html: { id: 'event-name' } %>
+      <%= f.input :location, :as => :string, wrapper_html: { class: 'event-location' } %>
+      <%= f.input :type, :as => :string, wrapper_html: { id: 'event-type' } %>
+      <%= f.input :start, as: :time %>
+      <%= f.input :end, as: :time %>
+      <%= f.button :submit, html: { class: 'sexy-button' } %>
+    <% end %>
+
+  </div>
+</div>
