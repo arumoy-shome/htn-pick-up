@@ -14,6 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'simple_form', '~> 3.1.1'
 gem 'geocoder'
+gem 'gmaps4rails'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
