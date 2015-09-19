@@ -1,24 +1,15 @@
+<div class="container">
+	<header>
+		<h1>APP NAME!</h1>
+		<h3>some cheesy app slogan</h3>
+		<p>Some info about our appsome info about our appome info about our </p>
+	</header>
 
-<header>
-	<h1>APP NAME!</h1>
-	<h3>some cheesy app slogan</h3>
-	<p>Some info about our appsome info about our appome info about our appome info about our appome info about our appome info about our appome info about our appome info about our app
-	</p>
-</header>
-
-<section>
-	<div>
-		<div class="login-icon">
-            <img src="img/login/icon.png" alt="Welcome to our App fool">
-            <h4>Welcome to <small>PickApp</small></h4>
-          </div>
-	</div>
-	<div class="login-form">
-		<div class="form-group">
-			<input type="text" class="form-control login-field" placeholder="Username" >
-			<label class="login-field-icon fui-user" for="login-name"></label>
+	<section>
+		<div class="login-form">
+			<%= link_to "Sign in", new_user_session_path, class: "btn btn-primary btn-large"%>
+			<%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-large"%>
+			<p><br /> <a class="login-link" href="#">Lost your password?</a></p>
 		</div>
-		<a class="btn btn-primary btn-lg btn-block" href="#">Log in</a>
-		<a class="login-link" href="#">Lost your password?</a>
-	</div>
-</section>
+	</section>
+</div>
