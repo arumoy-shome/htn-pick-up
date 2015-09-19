@@ -25,18 +25,18 @@
       <div class="panel-body">
         <div class="row">
           <div class="col-md-4">
-            Location: <%= event.location %>
+            <b>Location:</b> <%= event.location %>
             <br>
-            Game: <%= event.type %>
+            <b>Game:</b> <%= event.type %>
             <br>
-            Start time: <%= event.start %>
+            <b>Start time:</b> <%= event.start %>
             <br>
-            End time: <%= event.end %>
+            <b>End time:</b> <%= event.end %>
           </div>
           <div class="col-md-6 col-md-offset-2">
             <div style="width:100%;max-width:100%;overflow:hidden;height:auto;color:red;">
               <div id="embed-map-canvas" style="height:100%; width:100%;max-width:100%;">
-                <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=morden,+mb&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe>
+                <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=33.129861,+-111.239662&aq=&sll=33.605415,-112.125051&sspn=0.984773,2.099762&ie=UTF8&t=h&z=14&ll=33.129861,-111.239662&output=embed"></iframe>
               </div>
               <style>#embed-map-canvas .text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style>
             </div>
