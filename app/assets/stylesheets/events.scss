@@ -1,3 +1,29 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.events-page {
+	color: #2c3e50;
+}
+
+
+
+.main-title {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.sexy-button {
+	margin-top: 25px;
+	background: #34495e;
+	border-color: #2c3e50
+}
+
+
+.table-hover > tbody > tr:hover {
+	background: #2ecc71;
+}
+
+.event-form {
+	padding: 20px;
+}
