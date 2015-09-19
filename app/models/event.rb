@@ -4,4 +4,8 @@ class Event < ActiveRecord::Base
 
   #allow `type` to be a column name
   self.inheritance_column = nil
+
+  #for geocoder
+  geocoded_by :location
+  after_validation :geocode
 end
