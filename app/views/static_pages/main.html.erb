@@ -1,8 +1,15 @@
-<h1>StaticPages#main</h1>
-<p>Find me in app/views/static_pages/main.html.erb</p>
+<div class="container">
+	<header>
+		<h1>APP NAME!</h1>
+		<h3>some cheesy app slogan</h3>
+		<p>Some info about our appsome info about our appome info about our </p>
+	</header>
 
-<ul>
-  <li>add banner</li>
-  <li>add login button</li>
-  <li>add sign up button</li>
-</ul>
+	<section>
+		<div class="login-form">
+			<%= link_to "Sign in", new_user_session_path, class: "btn btn-primary btn-large"%>
+			<%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-large"%>
+			<p><br /> <a class="login-link" href="#">Lost your password?</a></p>
+		</div>
+	</section>
+</div>
