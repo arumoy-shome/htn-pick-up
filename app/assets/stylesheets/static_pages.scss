@@ -4,25 +4,37 @@
 
 body {  
 
-	background: url('http://images.freeimages.com/images/previews/84b/baseball-in-the-grass-1557579.jpg');
-	background-size: 100%;
+	background: url('http://images.freeimages.com/images/previews/84b/baseball-in-the-grass-1557579.jpg') no-repeat center center fixed;
+	background-size: cover;
+}
 
+.navbar-header img{
+	max-width: 200px;
 }
 
 .container{
+
+
 
 	margin: 0 auto;
 	text-align: center;
 	padding-top:90px;
 
-
-	.btn{
-		margin-bottom: 10px;
+	h1, h3, p{
+		color:#000;
 	}
 
-	.login-form{ 
-		max-width: 70%;
+	.sign-in{
+		min-width: 40%;
+		max-width: 60%;
 		margin: 0 auto;
 	}
+
+	.sign-up{
+		min-width: 40%;
+		max-width: 60%;
+		margin: 0 auto;
+	}
+
 }
 

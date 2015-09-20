@@ -1,16 +1,4 @@
-<!--end map-->
 <p id="notice"><%= notice %></p>
-
-<!-- Load Facebook SDK for JavaScript -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
 
 <div class="container-fluid events-page">
   <div class="row header">
@@ -24,8 +12,6 @@
     </div>
   </div>
 
-
-  
   <div class="row events-table">
     <div class="col-md-6">
 
@@ -36,7 +22,6 @@
 
     </div>
     <div class="col-md-6 events-list well">
-
       <% @events.reverse_each do |event| %>
       <div class="panel panel-default" onclick="panToMap(<%= event.latitude %>, <%= event.longitude %>)">
         <div class="panel-heading"><%= event.name %></div>
@@ -94,7 +79,4 @@
   }
   google.maps.event.addDomListener(window, 'load', initialize);
 </script>
-
-
 <!--JS ENDS-->
-
