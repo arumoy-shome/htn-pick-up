@@ -35,7 +35,7 @@ class EventsController < ApplicationController
       if @event.save
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
         format.json { render :show, status: :created, location: @event }
-        EventNotifierJob.perform_now(@event, current_user)
+        EventNotifierJob.perform_now(@event, User.all)
       else
         format.html { render :new }
         format.json { render json: @event.errors, status: :unprocessable_entity }
