@@ -1,21 +1,10 @@
 Rake::Task['db:reset'].invoke
-5.times do |n|
-  User.create!(name: "First Last #{n}",
-  email: "example#{n}@user.com",
-  password: "secret00",
-  password_confirmation: "secret00")
-end
 
-User.all.each do |user|
-  10.times do
-    user.events.create!(name: "fake user event",
-    location: "fake location",
-    type: "sports type")
-  end
-end
+User.create!(name: "Drewdulz Warkentin", email: "drew@gmail.com", password: "hackthenorth", password_confirmation: "hackthenorth", phone_number: "5196163739")
+User.create!(name: "Appdul Hamdy", email: "abdul@gmail.com", password: "hackthenorth", password_confirmation: "hackthenorth", phone_number: "6474473576")
+User.create!(name: "TheRails Shome", email: "arumoy@gmail.com", password: "hackthenorth", password_confirmation: "hackthenorth", phone_number: "6475319974")
 
-Event.all.limit(2) do |event|
-  5.times do
-    # event.users.add
-  end
-end
+User.first.events.create!(name: "Soccer with Dave", location: "Waterloo park, Waterloo, ON", type: "Soccer", start: sjfh, end: asldkfj)
+User.second.events.create!(name: "Extreme Ultimate", location: "Warrior field, Waterloo, ON", type: "Frisbee", start: sjfh, end: asldkfj)
+User.last.events.create!(name: "Pickup Football", location: "Victoria park, Waterloo, ON", type: "Football", start: sjfh, end: asldkfj)
+

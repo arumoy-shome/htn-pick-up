@@ -7,11 +7,11 @@
         <%= devise_error_messages! %>
 
         <%= f.input :email, :as => :string %>
-        <%= f.input :password, :as => :string %>
+        <%= f.input :password, :as => :password %>
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> characters minimum)</em>
         <% end %><br />
-        <%= f.input :password_confirmation, :as => :string, autocomplete: "off" %>
+        <%= f.input :password_confirmation, :as => :password, autocomplete: "off" %>
         <%= f.button :submit, html: { class: 'sexy-button' } %>
 
       <% end %>
