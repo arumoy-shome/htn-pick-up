@@ -49,6 +49,11 @@ $break-small: 992px;
 #map {
 	border-radius: 5px;
 }
+.fb-share {
+	width: 75px;
+	height: auto;
+	margin-top: 5px;
+}
 
 // Spacing for non-desktop
 @media screen and (max-width: $break-small) {
@@ -57,7 +62,15 @@ $break-small: 992px;
 		padding-left: 30px;
 	}
 	.sexy-button {
-		margin-top: none;
+		margin-top: 0px;
+	}
+
+	.main-title {
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	#map {
+		height: 10vh;
 	}
 }
 
