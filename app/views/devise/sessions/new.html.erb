@@ -8,7 +8,9 @@
 
         <%= f.input :email, :as => :string, autofocus: true %>
         <%= f.input :password, :as => :password %>
-        <%= f.button :submit, "Log In", html: { class: 'sexy-button' } %>
+        <div class="center-align">
+          <%= f.button :submit, "Log In" %>
+        </div>
 
       <% end %>
 
