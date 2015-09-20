@@ -7,11 +7,8 @@
         <%= devise_error_messages! %>
 
         <%= f.input :email, :as => :string, autofocus: true %>
-        <%= f.input :password, :as => :string %>
-        <% if devise_mapping.rememberable? -%>
-            <%= f.check_box :remember_me %>
-        <% end -%>
-        <%= f.button :submit, html: { class: 'sexy-button' } %>
+        <%= f.input :password, :as => :password %>
+        <%= f.button :submit, "Log In", html: { class: 'sexy-button' } %>
 
       <% end %>
 

@@ -1,16 +1,22 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$break-small: 992px;
+
+
+.body {
+	color: #2c3e50 !important;
+}
 
 .events-page {
 	color: #2c3e50;
+	padding-right: 30px;
 }
 
 .new-event-button {
 	text-align: center;
 	margin-bottom: 20px;
 }
-
 
 .main-title {
 	text-align: center;
@@ -23,7 +29,6 @@
 	border-color: #2c3e50
 }
 
-
 .table-hover > tbody > tr:hover {
 	background: #2ecc71;
 }
@@ -34,5 +39,25 @@
 
 .events-map {
 	margin-bottom: 20px;
+}
+
+.events-list {
+	height: 80vh;
+	overflow: scroll;
+}
+
+#map {
+	border-radius: 5px;
+}
+
+// Spacing for non-desktop
+@media screen and (max-width: $break-small) {
+	.events-page {
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+	.sexy-button {
+		margin-top: none;
+	}
 }
 
