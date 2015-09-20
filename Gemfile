@@ -15,6 +15,7 @@ gem 'devise'
 gem 'simple_form', '~> 3.1.1'
 gem 'geocoder'
 gem 'gmaps4rails'
+gem 'twilio-ruby', '~> 4.3.0'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
