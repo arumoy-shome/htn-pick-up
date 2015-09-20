@@ -10,4 +10,5 @@ Rails.application.routes.draw do
 
   #events
   resources :events
+  get '/events/:id/join', to: 'events#join', as: 'join_event'
 end
