@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :set_event, only: [:show, :edit, :update, :destroy, :join]
 
   # GET /events
   # GET /events.json
@@ -65,6 +65,13 @@ class EventsController < ApplicationController
       format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def join
+    attendee = User.find(current_user)
+    @event.users << attendee
+    format.html { redirect_to @event, notice: 'Attendee was successfully added.' }
+    format.json { render :show, status: :created, location: @event }
   end
 
   private
